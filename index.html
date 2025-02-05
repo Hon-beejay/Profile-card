@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <img src="photo_2025-02-05_18-08-05.jpg" alt="Profile Picture" class="profile-picture" data-testid="profilePicture">
+        <h2 data-testid="fullName">Aguocha Arinze</h2>
+        <h4 data-testid="jobTitle">Frontend Developer</h4>
+        <p data-testid="shortBio">Passionate frontend developer with 1+ years of experience in web development, specializing in JavaScript, HTML, and CSS.</p>
+        <p data-testid="currentLocation">Enugu, Nigeria </p>
+        
+        <div class="social-links" data-testid="socialLinks">
+            <a href="mailto:arinzeaguocha@gmail.com" data-testid="emailAddress">
+                <img src="gmail_732200.png" alt="Gmail">
+            </a>
+            <a href="https://www.linkedin.com/in/aguocha-arinze-562441208/" target="_blank">
+                <img src="linkedin_2504923.png" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/Hon-beejay" target="_blank">
+                <img src="github_2504911.png" alt="GitHub">
+            </a>
+            <a href="https://x.com/ArinzeAguocha" target="_blank">
+                <img src="twitter-alt-circle_12107562.png" alt="Twitter">
+            </a>
+        </div>
+        <p data-testid="currentTimeUTC" id="utc-time"></p>
+    </div>
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const utcPlusOne = new Date(now.getTime() + 60 * 60 * 1000); 
+            document.getElementById('utc-time').textContent = 'UTC+1 Time: ' + utcPlusOne.toUTCString();
+        }
+        updateTime();
+    </script>
+</body>
+</html>
